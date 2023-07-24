@@ -1,0 +1,14 @@
+{
+  "name": "ejercicios-nodejs",
+  "version": "1.0.0",
+  "description": "Curso NodeJS Midudev",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node ./test/index.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
