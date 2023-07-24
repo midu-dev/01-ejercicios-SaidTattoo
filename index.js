@@ -26,15 +26,15 @@ async function readFileAndCount(word, callback) {
   }
 
  try {
-    await fs.promises.access(filePath, fs.constants.F_OK);
-    const content = await fs.promises.readFile(filePath, 'utf-8');
-    const existWord = (content.match(new RegExp(word, 'gi')) || []).length;
-    callback(null,existWord);
+    await fs.promises.access(filePath, fs.constants.F_OK)
+    const content = await fs.promises.readFile(filePath, 'utf-8')
+    const existWord = (content.match(new RegExp(word, 'gi')) || []).length
+    callback(null,existWord)
   } catch (err) {
     if (err.code === 'ENOENT') {
-      callback(null,0); // Si el archivo no existe, devolvemos 0 como resultado
+      callback(null,0) 
     }else{
-      callback(err);
+      callback(err)
     }
   }
 }
